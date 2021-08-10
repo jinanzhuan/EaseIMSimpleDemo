@@ -57,7 +57,7 @@
         <activity android:name=".ConversationActivity" />
 
         <!-- 设置环信应用的AppKey -->
-        <meta-data android:name="EASEMOB_APPKEY"  android:value="Your appkey" />
+        <meta-data android:name="EASEMOB_APPKEY"  android:value="easemob-demo#easeim" />
         <!-- 声明SDK所需的service SDK核心功能-->
         <service android:name="com.hyphenate.chat.EMChatService" android:exported="true"/>
         <service android:name="com.hyphenate.chat.EMJobService"
@@ -76,6 +76,17 @@
                 <action android:name="android.intent.action.USER_PRESENT" />
             </intent-filter>
         </receiver>
+
+        <!-- 适配Android 7.0, 需要将下方的com.hyphenate.easeim替换为你的app包名 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
 
     </application>
 

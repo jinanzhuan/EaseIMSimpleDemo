@@ -97,7 +97,7 @@ public class ChatActivity extends BaseActivity{
     private void  getChatRoom(String roomId) {
         EMChatRoom room = EMClient.getInstance().chatroomManager().getChatRoom(roomId);
         if(room != null) {
-
+            runOnUiThread(()->setDefaultTitle());
         }else {
             EMClient.getInstance().chatroomManager().asyncFetchChatRoomFromServer(roomId, new EMValueCallBack<EMChatRoom>() {
                 @Override

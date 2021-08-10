@@ -39,4 +39,5 @@ dependencies {
 
     implementation 'io.hyphenate:ease-im-kit:3.8.4'
     implementation 'io.hyphenate:hyphenate-chat:3.8.4'
+    implementation "androidx.documentfile:documentfile:1.0.1"
 }
