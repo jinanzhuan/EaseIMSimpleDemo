@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">EaseIMDemo</string>
+    <string name="em_login_name_hint">用户名</string>
+    <string name="em_login_password_hint">密码</string>
+    <string name="em_login_btn">登\u0020录</string>
+
+</resources>
